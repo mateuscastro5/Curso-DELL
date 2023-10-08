@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200&family=Poppins:ital,wght@0,100;0,300;1,200&family=Young+Serif&display=swap');
+
+html,body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Young Serif', serif;
+    background-color: bisque;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .circle
+{
+    content: '';
+    width: 90px;
+    height: 90px;
+    background: bisque;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.circle:hover 
+{
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background-color: rgb(66, 61, 61);
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.circle.opened 
+{
+    width: 800px;
+    height: 800px;
+    background-color: rgb(66, 61, 61);
+    border-radius: 20px;
+}
+.ring
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    pointer-events: fill;
+    transition: 1s;
+    width: 100%;
+}
+
+.ring:hover
+{
+    animation-name: opacityOff;
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
+    transition: 2s;
+}
+.circle .content{
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s;
+    width: 85%;
+    padding: 20px 20px 20px 40px;
+    background-color: rgb(66, 61, 61);
+    pointer-events: none;
+    border-radius: 20px;
+    text-align: justify;
+    overflow-y: hidden;
+    max-height: 100%;
+}
+.tree
+{
+    width: 400px;
+    left: 50%;
+}
+
+.circle:hover .content{
+    opacity: 1;
+    visibility: visible;
+}
+
+h3
+{
+    color: white;
+    text-align: center;
+}
+p
+{
+    color: white;
+}
+
+@keyframes opacityOff {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
