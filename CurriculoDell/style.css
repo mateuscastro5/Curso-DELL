@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+*{
+    padding: 0;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.fotoperfil {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.curriculotitulo {
+    text-align: center;
+    font-size: 60px;
+}
+
+.titulos {
+    margin: 0px;
+}
+
+.fototexto{
+    width: 20%;
+}
+
+.table {
+    width: 400px;
+}
+
+.table th {
+    text-align: left;
+    width: 400px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
